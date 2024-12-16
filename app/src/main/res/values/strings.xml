@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MyPlace</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="no_listings">No listings</string>
+    <string name="login">Login</string>
+    <string name="myplace_listings">MyPlace Listings</string>
+    <string name="rentals">Rentals</string>
+    <string name="real_estate">Real Estate</string>
+    <string-array name="province_array">
+        <item>AB</item>
+        <item>BC</item>
+        <item>MB</item>
+        <item>NB</item>
+        <item>NL</item>
+        <item>NWT</item>
+        <item>NS</item>
+        <item>NU</item>
+        <item>ON</item>
+        <item>PEI</item>
+        <item>QC</item>
+        <item>SK</item>
+        <item>YT</item>
+    </string-array>
+    <string-array name="furnish_array">
+        <item>Not Furnished</item>
+        <item>Partially Furnished</item>
+        <item>Fully Furnished</item>
+    </string-array>
+    <string-array name="rent_periods_array">
+        <item>Weekly</item>
+        <item>Biweekly</item>
+        <item>Monthly</item>
+    </string-array>
+</resources>

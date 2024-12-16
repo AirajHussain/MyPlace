@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006D77"
+    tools:context=".RentalViewListing">
+
+    <TextView
+        android:id="@+id/viewRental_Listing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Rental Listing"
+        android:textAlignment="center"
+        android:textColor="#EDF6F9"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NRL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_page_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationViewR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRental_Listing"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/placeholder"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <TextView
+            android:id="@+id/rentalAmountTxtview"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Rent:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRentalAmount"
+            app:layout_constraintEnd_toStartOf="@+id/viewPostalRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewRentalAmount" />
+
+        <EditText
+            android:id="@+id/viewRentalAmount"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/viewProvRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewPostalRental" />
+
+        <TextView
+            android:id="@+id/Streettxtview"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Street Address:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewStreetRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewStreetRental"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewStreetRental" />
+
+        <TextView
+            android:id="@+id/CityTxtview"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="City:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewCityRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewCityRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewCityRental" />
+
+        <TextView
+            android:id="@+id/province4view"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Province:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewProvRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewProvRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewProvRental" />
+
+        <TextView
+            android:id="@+id/postcodeTxt3view"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Postal Code:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPostalRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewPostalRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewPostalRental" />
+
+        <EditText
+            android:id="@+id/viewStreetRental"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRentalName" />
+
+        <EditText
+            android:id="@+id/viewCityRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewStreetRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewStreetRental" />
+
+        <Spinner
+            android:id="@+id/viewProvRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:entries="@array/province_array"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewCityRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewCityRental" />
+
+        <EditText
+            android:id="@+id/viewPostalRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewProvRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewProvRental" />
+
+        <EditText
+            android:id="@+id/viewRentalName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:hint="Enter Listing Name"
+            android:singleLine="true"
+            app:layout_constraintBottom_toTopOf="@+id/Streettxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rentalPeriodTxtview"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Rental Period:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRentalPeriod"
+            app:layout_constraintEnd_toStartOf="@+id/viewRentalPeriod"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewRentalPeriod" />
+
+        <EditText
+            android:id="@+id/viewRentalPeriod"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/viewRentalAmount"
+            app:layout_constraintTop_toBottomOf="@+id/viewRentalAmount" />
+
+        <TextView
+            android:id="@+id/rentalMITxtview"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Move In Date:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewMoveInRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewMoveInRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewMoveInRental" />
+
+        <EditText
+            android:id="@+id/viewMoveInRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/viewRentalPeriod"
+            app:layout_constraintTop_toBottomOf="@+id/viewRentalPeriod" />
+
+        <TextView
+            android:id="@+id/viewBedRtxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bedrooms:"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="24dp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRoomsRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewRoomsRental"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewRoomsRental" />
+
+        <TextView
+            android:id="@+id/viewBathRtxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bathrooms:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewBathroomsRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewBathroomsRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewBathroomsRental" />
+
+        <EditText
+            android:id="@+id/viewRoomsRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewMoveInRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewMoveInRental" />
+
+        <EditText
+            android:id="@+id/viewBathroomsRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewRoomsRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewRoomsRental" />
+
+        <Spinner
+            android:id="@+id/viewFurnishRental"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:entries="@array/furnish_array"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewBathroomsRental"
+            app:layout_constraintTop_toBottomOf="@+id/viewBathroomsRental" />
+
+        <TextView
+            android:id="@+id/viewFurnishRtxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Furnish:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/viewFurnishRental"
+            app:layout_constraintEnd_toStartOf="@+id/viewFurnishRental"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewFurnishRental" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFurnishRental">
+
+            <CheckBox
+                android:id="@+id/DishwasherRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.15"
+                android:fontFamily="@font/ubuntu"
+                android:text="Dishwasher" />
+
+            <CheckBox
+                android:id="@+id/FridgeRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Fridge" />
+
+            <CheckBox
+                android:id="@+id/OvenRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Oven" />
+
+            <CheckBox
+                android:id="@+id/LaundryRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Laundry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <CheckBox
+                android:id="@+id/HydroRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.15"
+                android:fontFamily="@font/ubuntu"
+                android:text="Hydro" />
+
+            <CheckBox
+                android:id="@+id/HeatRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Heat" />
+
+            <CheckBox
+                android:id="@+id/WaterRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Water" />
+
+            <CheckBox
+                android:id="@+id/ACRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="A/C" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <CheckBox
+                android:id="@+id/smokingRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.15"
+                android:fontFamily="@font/ubuntu"
+                android:text="Smoking" />
+
+            <CheckBox
+                android:id="@+id/PetRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Pets" />
+
+            <CheckBox
+                android:id="@+id/WifiRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Wifi" />
+
+            <CheckBox
+                android:id="@+id/ParkingRentalview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Parking" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/edit_save_Rental"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#83C5BE"
+                android:fontFamily="@font/ubuntu_bold"
+                android:maxHeight="50dp"
+                android:text="Edit"
+                android:textColor="#006D77"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#006D77"
+        app:itemIconTint="#EDF6F9"
+        app:itemTextColor="#EDF6F9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/nav_bar"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

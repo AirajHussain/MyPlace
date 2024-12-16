@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.profileInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/userNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/username"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firstname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/first_name"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTxt" />
+
+        <TextView
+            android:id="@+id/lastname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/last_name"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toBottomOf="@+id/firstname" />
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/email"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toBottomOf="@+id/lastname" />
+
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/phone_number"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+
+        <TextView
+            android:id="@+id/txtPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/password"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/centerDivider"
+            app:layout_constraintStart_toStartOf="@+id/leftDivider"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTxt" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".9" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#006D77"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Edit"
+            android:textColor="#EDF6F9"
+            android:textColorLink="#006D77"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomDivider"
+            app:layout_constraintWidth_percent=".75" />
+
+        <TextView
+            android:id="@+id/fnameTextView"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Username will go here"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/firstname"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/firstname" />
+
+        <TextView
+            android:id="@+id/lnameTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Last Name will go here"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/lastname"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/lastname" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Email will go here"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/txtemail"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtemail" />
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Phone Number will go here"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/phoneTxt"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/phoneTxt"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:password="true"
+            android:text="Password will go here"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPassword"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtPassword" />
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="@string/username"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="42sp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/userNameTxt"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/userNameTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

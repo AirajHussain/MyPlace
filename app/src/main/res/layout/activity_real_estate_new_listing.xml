@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006D77">
+
+    <TextView
+        android:id="@+id/newRE_Listing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="New Real Estate Listing"
+        android:textAlignment="center"
+        android:textColor="#EDF6F9"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NRLRE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_page_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationViewE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newRE_Listing"
+        app:layout_constraintVertical_bias="1.0">
+
+        <EditText
+            android:id="@+id/newREName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:hint="Enter Listing Name"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/StreettxtRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Street Address:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newStreetRE"
+            app:layout_constraintEnd_toStartOf="@+id/newStreetRE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newStreetRE" />
+
+        <EditText
+            android:id="@+id/newStreetRE"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newREName" />
+
+        <TextView
+            android:id="@+id/CityTxtRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="City:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newCityRE"
+            app:layout_constraintEnd_toStartOf="@+id/newCityRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newCityRE" />
+
+        <EditText
+            android:id="@+id/newCityRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newStreetRE"
+            app:layout_constraintTop_toBottomOf="@+id/newStreetRE" />
+
+        <TextView
+            android:id="@+id/provincetxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Province:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newProvRE"
+            app:layout_constraintEnd_toStartOf="@+id/newProvRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newProvRE" />
+
+        <Spinner
+            android:id="@+id/newProvRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:entries="@array/province_array"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newCityRE"
+            app:layout_constraintTop_toBottomOf="@+id/newCityRE" />
+
+        <TextView
+            android:id="@+id/postcodeTxtRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Postal Code:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newPostalRE"
+            app:layout_constraintEnd_toStartOf="@+id/newPostalRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newPostalRE" />
+
+        <EditText
+            android:id="@+id/newPostalRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newProvRE"
+            app:layout_constraintTop_toBottomOf="@+id/newProvRE" />
+
+        <TextView
+            android:id="@+id/RETypeTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Rent:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newREType"
+            app:layout_constraintEnd_toStartOf="@+id/newPostalRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newREType" />
+
+        <EditText
+            android:id="@+id/newREType"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/newPostalRE"
+            app:layout_constraintTop_toBottomOf="@+id/newPostalRE" />
+
+        <TextView
+            android:id="@+id/newBedREtxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bedrooms:"
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="24dp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newRoomsRE"
+            app:layout_constraintEnd_toStartOf="@+id/newRoomsRE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newRoomsRE" />
+
+        <EditText
+            android:id="@+id/newRoomsRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newREType"
+            app:layout_constraintTop_toBottomOf="@+id/newREType" />
+
+        <TextView
+            android:id="@+id/newBathREtxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bathrooms:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newBathroomsRE"
+            app:layout_constraintEnd_toStartOf="@+id/newBathroomsRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newBathroomsRE" />
+
+        <EditText
+            android:id="@+id/newBathroomsRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newRoomsRE"
+            app:layout_constraintTop_toBottomOf="@+id/newRoomsRE" />
+
+        <TextView
+            android:id="@+id/IDSizetxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bathrooms:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newSizeRE"
+            app:layout_constraintEnd_toStartOf="@+id/newSizeRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newSizeRE" />
+
+        <EditText
+            android:id="@+id/newSizeRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newBathroomsRE"
+            app:layout_constraintTop_toBottomOf="@+id/newBathroomsRE" />
+
+        <TextView
+            android:id="@+id/ODSizetxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bathrooms:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newOutSizeRE"
+            app:layout_constraintEnd_toStartOf="@+id/newOutSizeRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newOutSizeRE" />
+
+        <EditText
+            android:id="@+id/newOutSizeRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newSizeRE"
+            app:layout_constraintTop_toBottomOf="@+id/newSizeRE" />
+
+        <TextView
+            android:id="@+id/Garagetxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Total Bathrooms:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newGarageRE"
+            app:layout_constraintEnd_toStartOf="@+id/newGarageRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newGarageRE" />
+
+        <EditText
+            android:id="@+id/newGarageRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newOutSizeRE"
+            app:layout_constraintTop_toBottomOf="@+id/newOutSizeRE" />
+
+        <TextView
+            android:id="@+id/reMITxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:editable="false"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:text="Move In Date:"
+            android:textSize="20sp"
+            app:autoSizeMinTextSize="12dp"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@+id/newMoveInRE"
+            app:layout_constraintEnd_toStartOf="@+id/newMoveInRE"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newMoveInRE" />
+
+        <EditText
+            android:id="@+id/newMoveInRE"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/newGarageRE"
+            app:layout_constraintTop_toBottomOf="@+id/newGarageRE" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newMoveInRE">
+
+            <CheckBox
+                android:id="@+id/DishwasherRE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.15"
+                android:fontFamily="@font/ubuntu"
+                android:text="Dishwasher" />
+
+            <CheckBox
+                android:id="@+id/FridgeRE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Fridge" />
+
+            <CheckBox
+                android:id="@+id/OvenRE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Oven" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <CheckBox
+                android:id="@+id/LaundryRE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Laundry" />
+
+            <CheckBox
+                android:id="@+id/HeatRE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Heat" />
+
+            <CheckBox
+                android:id="@+id/CoolRental"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu"
+                android:text="Cooling" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <Button
+                android:id="@+id/uploadImageRE"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E29578"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="center_horizontal"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="Upload Image"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/postRE"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:layout_weight="1.5"
+                android:backgroundTint="#83C5BE"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Post Listing"
+                android:textColor="#006D77"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#006D77"
+        app:itemIconTint="#EDF6F9"
+        app:itemTextColor="#EDF6F9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/nav_bar"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
