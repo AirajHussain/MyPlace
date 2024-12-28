@@ -9,5 +9,6 @@ MyPlace is a mobile application designed to simplify property management by prov
 - Android Studio
 
 # 📷 Pictures
+<img src="https://github.com/AirajHussain/MyPlace/blob/main/images/listings.png" alt="login_page" width="500"/>
 
 # Setup Instructions
